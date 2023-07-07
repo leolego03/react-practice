@@ -28,3 +28,44 @@ export const OverlayButton = styled.button`
     position: fixed;
     background: rgba(49,49,49,0.8);
 `
+
+export const FirstButton = styled.button`
+    width: 120px;
+    height: 40px;
+    border: none;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color: #50C2FF;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+`
+export const SecondButton = styled.button`
+    width: 120px;
+    height: 40px;
+    border: 3px solid #7AFFCF;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: white;
+    cursor: pointer;
+`
+
+export const CloseModalbutton = styled.button`
+    top: 10px;
+    
+    right: 10px;
+    padding: 5px 7px;
+    margin: 0 15px 0 0;
+    border: 2px solid #3CC2FF;
+    border-radius: 8px;
+    cursor: pointer;
+`
+
+export const ConfirmModalbutton = styled.button`
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+    border-radius: 8px;
+    border: 2px solid #EB6464;
+    cursor: pointer;
+`

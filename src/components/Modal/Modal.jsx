@@ -20,15 +20,15 @@ const Modal = () => {
   return (
     <div>
         <h1>Modal</h1>
-        <button onClick={onFirstModal}>first modal</button>
-        <button onClick={onSecondModal}>second modal</button>
+        <S.FirstButton onClick={onFirstModal}>open</S.FirstButton>
+        <S.SecondButton onClick={onSecondModal}>open</S.SecondButton>
         {firstModal && (
           <S.Modalcontainer>
             <S.OverlayButton onClick={onOverlayClick}></S.OverlayButton>
             <S.Modalcontent>
               <h4>리액트를 배웁시다</h4>
-              <button onClick={onFirstModal}>닫기</button>
-              <button>확인</button>
+              <S.CloseModalbutton onClick={onFirstModal}>닫기</S.CloseModalbutton>
+              <S.ConfirmModalbutton>확인</S.ConfirmModalbutton>
             </S.Modalcontent>
         </S.Modalcontainer>
         )}
@@ -37,8 +37,8 @@ const Modal = () => {
             <S.OverlayButton onClick={onSecondModal}></S.OverlayButton>
             <S.Modalcontent>
               <h4>리액트를 배웁시다</h4>
-              <button onClick={onSecondModal}>닫기</button>
-              <button>확인</button>
+              <S.CloseModalbutton onClick={onSecondModal}>닫기</S.CloseModalbutton>
+              <S.ConfirmModalbutton>확인</S.ConfirmModalbutton>
             </S.Modalcontent>
         </S.Modalcontainer>
         )}
