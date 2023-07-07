@@ -15,6 +15,7 @@ export const Modalcontent = styled.div`
     padding: 15px 30px;
     width: 500px;
     height: 200px;
+    border-radius: 3px;
 
     position: absolute;
     top: 40%;
@@ -25,5 +26,5 @@ export const OverlayButton = styled.button`
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background: rgba(49,49,49,0,8);
+    background: rgba(49,49,49,0.8);
 `
