@@ -51,9 +51,6 @@ export const SecondButton = styled.button`
 `
 
 export const CloseModalbutton = styled.button`
-    top: 10px;
-    
-    right: 10px;
     padding: 5px 7px;
     margin: 0 15px 0 0;
     border: 2px solid #3CC2FF;
@@ -62,8 +59,6 @@ export const CloseModalbutton = styled.button`
 `
 
 export const ConfirmModalbutton = styled.button`
-    top: 10px;
-    right: 10px;
     padding: 5px 7px;
     border-radius: 8px;
     border: 2px solid #EB6464;
