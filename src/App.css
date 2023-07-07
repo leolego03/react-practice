@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+.Button-container {
+  padding: 0 20px 20px 20px;
+}
+
+.Button-container button {
+  margin-right: 10px;
+  width: 180px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+}
+
+.Button-container button:nth-of-type(2) {
+  width: 100px;
+}
+
+.Button-container button:nth-of-type(3) {
+  width: 60px;
+}
+
+.Form-container {
+  padding: 20px;
+}
+
+.Form-container form input {
+  width: 220px;
+  height: 40px;
+  font-size: 16px;
+  margin: 0 10px;
+  box-sizing: border-box;
+}
+
+.Form-container form button {
+  width: 60px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+}
