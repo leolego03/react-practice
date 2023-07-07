@@ -3,23 +3,23 @@ import * as S from "./SelectStyle"
 
 const Select = () => {
   return (
-    <div>
+    <S.SelectContainer>
         <h1>Select</h1>
-        <div>
-          <select>
+        <S.Selectdiv>
+          <S.SelectOptoin1>
             <option>스프링</option>
             <option>자바</option>
             <option>리액트</option>
             <option>노드</option>
-          </select>
-          <select>
+          </S.SelectOptoin1>
+          <S.SelectOptoin2>
             <option>스프링</option>
             <option>자바</option>
             <option>리액트</option>
             <option>노드</option>
-          </select>
-        </div>
-    </div>
+          </S.SelectOptoin2>
+        </S.Selectdiv>
+    </S.SelectContainer>
   )
 }
 
