@@ -1,5 +1,5 @@
 import React from 'react'
-import * as S from "../style/Appstyle"
+import * as S from ".ModalStyle/Modal"
 
 const Modal = () => {
   return (
