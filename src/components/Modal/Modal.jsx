@@ -14,14 +14,14 @@ const Modal = () => {
         <button onClick={onFirstModal}>first modal</button>
         <button>second modal</button>
         {firstModal && (
-          <div>
-            <div></div>
-            <div>
+          <S.Modalcontainer>
+            <S.OverlayButton></S.OverlayButton>
+            <S.Modalcontent>
               <h4>리액트를 배웁시다</h4>
               <button>닫기</button>
               <button>확인</button>
-            </div>
-        </div>
+            </S.Modalcontent>
+        </S.Modalcontainer>
         )}
     </div>
   )
