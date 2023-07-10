@@ -1,7 +1,29 @@
-// import React from 'react'
-// import * as S from "../style/Appstyle"
 import { useState } from "react";
-import "../App.css";
+import styled from "styled-components";
+
+const InputComponent = styled.div`
+  width: 800px;
+  margin: 0 auto;
+`
+
+const FormContainer = styled.div`
+  padding: 20px;
+`
+
+const StyledInput = styled.input`
+  width: 220px;
+  height: 40px;
+  font-size: 16px;
+  margin: 0 10px;
+  box-sizing: border-box;
+`
+
+const SubmitButton = styled.button`
+  width: 60px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+`
 
 const Input = () => {
   const [name, setName] = useState("");
@@ -34,35 +56,37 @@ const Input = () => {
 
   return (
     <>
-      <div>
-        <h1>Input</h1>
-      </div>
+      <InputComponent>
+        <div>
+          <h1>Input</h1>
+        </div>
 
-      <div className="Form-container">
-        <form onSubmit={onSubmitForm}>
-          <label>이름</label>
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={onChangeName}
-          ></input>
+        <FormContainer>
+          <form onSubmit={onSubmitForm}>
+            <label>이름</label>
+            <StyledInput
+              type="text"
+              name="name"
+              value={name}
+              onChange={onChangeName}
+            ></StyledInput>
 
-          <label>가격</label>
-          <input
-            type="text"
-            name="price"
-            value={price}
-            onChange={onChangePrice}
-          ></input>
+            <label>가격</label>
+            <StyledInput
+              type="text"
+              name="price"
+              value={price}
+              onChange={onChangePrice}
+            ></StyledInput>
 
-          <button
-            type="submit"
-          >
-            저장
-          </button>
-        </form>
-      </div>
+            <SubmitButton
+              type="submit"
+            >
+              저장
+            </SubmitButton>
+          </form>
+        </FormContainer>
+      </InputComponent>
     </>
   )
 }

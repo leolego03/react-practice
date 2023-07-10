@@ -1,6 +1,29 @@
-// import React from 'react'
-// import * as S from "../style/Appstyle"
-import "../App.css";
+import styled from "styled-components";
+
+const ButtonComponent = styled.div`
+  width: 800px;
+  margin: 0 auto;
+`
+
+const ButtonContainer = styled.div`
+  padding: 0 20px 20px 20px;
+`
+
+const StyledButton = styled.button`
+  margin-right: 10px;
+  width: 180px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+
+  &:nth-of-type(2) {
+    width: 100px;
+  }
+
+  &:nth-of-type(3) {
+    width: 60px;
+  }
+`
 
 const Button = () => {
   const onClickPrimaryButton = () => {
@@ -13,31 +36,33 @@ const Button = () => {
 
   return (
     <>
-      <div>
-        <h1>Button</h1>
-      </div>
-    
-      <div className="Button-container">
-        <button
-          onClick={onClickPrimaryButton}
-        >
-          Large Primary Button
-        </button>
+      <ButtonComponent>
+        <div>
+          <h1>Button</h1>
+        </div>
+      
+        <ButtonContainer>
+          <StyledButton
+            onClick={onClickPrimaryButton}
+          >
+            Large Primary Button
+          </StyledButton>
 
-        <button>Medium</button>
-        <button>small</button>
-      </div>
+          <StyledButton>Medium</StyledButton>
+          <StyledButton>small</StyledButton>
+        </ButtonContainer>
 
-      <div className="Button-container">
-        <button
-          onClick={onClickNevigateButton}
-        >
-          Large Nevigate Button
-        </button>
+        <ButtonContainer>
+          <StyledButton
+            onClick={onClickNevigateButton}
+          >
+            Large Nevigate Button
+          </StyledButton>
 
-        <button>Medium</button>
-        <button>small</button>
-      </div>
+          <StyledButton>Medium</StyledButton>
+          <StyledButton>small</StyledButton>
+        </ButtonContainer>
+      </ButtonComponent>
     </>
   )
 }
