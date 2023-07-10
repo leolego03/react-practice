@@ -3,11 +3,18 @@ import styled from "styled-components";
 
 const InputComponent = styled.div`
   width: 800px;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 20px 20px 80px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+`
+
+const Title = styled.h1`
+  margin: 0;
 `
 
 const FormContainer = styled.div`
-  padding: 20px;
+  margin-top: 20px;
 `
 
 const StyledInput = styled.input`
@@ -16,6 +23,8 @@ const StyledInput = styled.input`
   font-size: 16px;
   margin: 0 10px;
   box-sizing: border-box;
+  border-radius: 10px;
+  border: 2px solid #9c9c9c;
 `
 
 const SubmitButton = styled.button`
@@ -23,6 +32,13 @@ const SubmitButton = styled.button`
   height: 40px;
   font-size: 16px;
   border: none;
+  border-radius: 10px;
+  background-color: #75baff;
+  cursor: pointer;
+
+  &:active {
+    background-color: #509be6;
+  }
 `
 
 const Input = () => {
@@ -58,7 +74,7 @@ const Input = () => {
     <>
       <InputComponent>
         <div>
-          <h1>Input</h1>
+          <Title>Input</Title>
         </div>
 
         <FormContainer>
