@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import ReactDom from 'react-dom'
 import * as S from "./ModalStyle"
 
 const Modal = () => {
@@ -17,7 +18,7 @@ const Modal = () => {
     setFisrtModal(true)
   }
 
-  return (
+  return ReactDom.createPortal (
     <div>
         <h1>Modal</h1>
         <S.FirstButton onClick={onFirstModal}>open</S.FirstButton>
@@ -42,7 +43,8 @@ const Modal = () => {
             </S.Modalcontent>
         </S.Modalcontainer>
         )}
-    </div>
+    </div>,
+    document.getElementById('portal')
   )
 }
 
