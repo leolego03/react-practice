@@ -1,24 +1,27 @@
-import React from 'react'
-import * as S from "./SelectStyle"
+import React from "react";
+import { SelectBox, Label, Option, SelectOptions } from "./SelectStyle";
 
 const Select = () => {
   return (
-    <S.SelectContainer>
-        <h1>Select</h1>
-          <S.SelectOptoin1>
-            <S.Option1>스프링</S.Option1>
-            <S.Option1>자바</S.Option1>
-            <S.Option1>리액트</S.Option1>
-            <S.Option1>노드</S.Option1>
-          </S.SelectOptoin1>
-          <S.SelectOptoin2>
-            <S.Option1>스프링</S.Option1>
-            <S.Option1>자바</S.Option1>
-            <S.Option1>리액트</S.Option1>
-            <S.Option1>노드</S.Option1>
-          </S.SelectOptoin2>
-    </S.SelectContainer>
-  )
-}
+    <div>
+      <h1>Select</h1>
+      <SelectBox>
+        <Label>Select</Label>
+        <SelectOptions>
+          <Option>스프링</Option>
+          <Option>자바</Option>
+          <Option>리액트</Option>
+          <Option>노드</Option>
+        </SelectOptions>
+        <SelectOptions>
+          <Option>스프링</Option>
+          <Option>자바</Option>
+          <Option>리액트</Option>
+          <Option>노드</Option>
+        </SelectOptions>
+      </SelectBox>
+    </div>
+  );
+};
 
-export default Select
+export default Select;
