@@ -1,12 +1,28 @@
-React_LV3 과제
+React_LV3 Assignment
+```
+Collection of reusable buttons
+```
 
-홍성민 김종화
++ Library
+  + React
 
-담당 기능
-- 홍성민 : 버튼, 인풋
-- 김종화 : 모달, 셀렉트
++ Team member
+  + [kimjonghwa230412](https://github.com/kimjonghwa230412)
+  + [leolego03](https://github.com/leolego03)
 
-코드 컨벤션 규칙
-- 변수와 함수 이름은 camelCase
-- 컴포넌트 이름음 PascalCase
-- 버튼을 다루는 함수 이름 앞에 on을 사용한다.
+#### Code Convention
+```
+Pascal Case: Component
+Camel Case: Function, Variable
+
+The event handler starts with an "on"
+```
+
+#### Roles
+```
+kimjonghwa230412: Modal, Select
+leolego03: Button, Input
+```
+
+#### Design
+![react-lv3-image](./images-readme/react-lv3-image.png)
