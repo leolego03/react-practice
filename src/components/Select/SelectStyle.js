@@ -1,11 +1,18 @@
 import { styled } from "styled-components";
 
+const SelectComponent = styled.div`
+  height: 60px;
+  width: 800px;
+  margin: 0 auto;
+  padding: 20px 20px 80px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+`;
+
 const Selectdiv = styled.div`
+  margin: 15px 0 0;
   position: relative;
-  overflow: hidden !important;
-  height: 70px;
-  width: 80%;
-  z-index: 0;
+  overflow: hidden;
 `;
 
 const SelectOption1 = styled.select`
@@ -14,18 +21,14 @@ const SelectOption1 = styled.select`
   border-radius: 12px;
   border: 2px solid #b4e5ff;
   position: absolute;
-  left: 10px;
-  z-index: 2;
 `;
 
 const SelectOption2 = styled.select`
-  margin-left: 170px;
+  margin-left: 160px;
   width: 150px;
   height: 40px;
-  overflow: hidden;
   border-radius: 12px;
   border: 2px solid #b4e5ff;
-  z-index: 1;
 `;
 
 const CustomOption = styled.option`
@@ -34,4 +37,4 @@ const CustomOption = styled.option`
   border: 2px solid #b4e5ff;
 `;
 
-export { Selectdiv, SelectOption1, SelectOption2, CustomOption };
+export { SelectComponent, SelectOption1, SelectOption2, CustomOption, Selectdiv };

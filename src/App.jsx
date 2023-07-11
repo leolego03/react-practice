@@ -7,9 +7,9 @@ const App = () => {
   return (
     <div>
       <Button />
-      <Select />
       <Input />
-      <Modal /> 
+      <Select />
+      <Modal />   
     </div>
   )
 }

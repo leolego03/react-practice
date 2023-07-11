@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import ReactDom from 'react-dom'
-import * as S from "./ModalStyle"
+import {ModalComponent, Modalcontainer, Modalcontent, OverlayButton, FirstButton, SecondButton, CloseModalbutton, ConfirmModalbutton} from "./ModalStyle"
 
 const Modal = () => {
   const [firstModal, setFisrtModal] = useState(false)
@@ -19,31 +19,31 @@ const Modal = () => {
   }
 
   return ReactDom.createPortal (
-    <div>
-        <h1>Modal</h1>
-        <S.FirstButton onClick={onFirstModal}>open</S.FirstButton>
-        <S.SecondButton onClick={onSecondModal}>open</S.SecondButton>
+    <ModalComponent>
+        <h1 style={{margin: "0"}}>Modal</h1>
+        <FirstButton onClick={onFirstModal}>open</FirstButton>
+        <SecondButton onClick={onSecondModal}>open</SecondButton>
         {firstModal && (
-          <S.Modalcontainer>
-            <S.OverlayButton onClick={onOverlayClick}></S.OverlayButton>
-            <S.Modalcontent>
+          <Modalcontainer>
+            <OverlayButton onClick={onOverlayClick}></OverlayButton>
+            <Modalcontent>
               <h4>리액트를 배웁시다</h4>
-              <S.CloseModalbutton onClick={onFirstModal}>닫기</S.CloseModalbutton>
-              <S.ConfirmModalbutton>확인</S.ConfirmModalbutton>
-            </S.Modalcontent>
-        </S.Modalcontainer>
+              <CloseModalbutton onClick={onFirstModal}>닫기</CloseModalbutton>
+              <ConfirmModalbutton>확인</ConfirmModalbutton>
+            </Modalcontent>
+        </Modalcontainer>
         )}
         {secondModal && (
-          <S.Modalcontainer>
-            <S.OverlayButton onClick={onSecondModal}></S.OverlayButton>
-            <S.Modalcontent>
+          <Modalcontainer>
+            <OverlayButton onClick={onSecondModal}></OverlayButton>
+            <Modalcontent>
               <h4>리액트를 배웁시다</h4>
-              <S.CloseModalbutton onClick={onSecondModal}>닫기</S.CloseModalbutton>
-              <S.ConfirmModalbutton>확인</S.ConfirmModalbutton>
-            </S.Modalcontent>
-        </S.Modalcontainer>
+              <CloseModalbutton onClick={onSecondModal}>닫기</CloseModalbutton>
+              <ConfirmModalbutton>확인</ConfirmModalbutton>
+            </Modalcontent>
+        </Modalcontainer>
         )}
-    </div>,
+    </ModalComponent>,
     document.getElementById('portal')
   )
 }
