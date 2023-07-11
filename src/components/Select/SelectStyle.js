@@ -1,51 +1,37 @@
 import { styled } from "styled-components";
 
-const SelectBox = styled.div`
+const Selectdiv = styled.div`
   position: relative;
-  width: 200px;
-  padding: 8px;
-  border: none;
+  overflow: hidden !important;
+  height: 70px;
+  width: 80%;
+  z-index: 0;
+`;
+
+const SelectOption1 = styled.select`
+  width: 150px;
+  height: 40px;
   border-radius: 12px;
-  align-self: center;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, .35);
-  cursor: pointer;
-  &::before {
-    content: "⌵";
-    position: absolute;
-    top: 1px;
-    right: 8px;
-    color: #49c181;
-    font-size: 20px;
-  }
-`
-
-const Label = styled.label`
-  font-size: 14px;
-  margin-left: 4px;
-  text-align: center;
-`
-
-const SelectOptions = styled.ul`
+  border: 2px solid #b4e5ff;
   position: absolute;
-  list-style: nooe;
-  top: 18px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  height: 90px;
-  max-height: ${(props)=>(props.show ? "none" : 0)};
-  padding: 0;
-  border-radius: 8px;
-  background-color: #222222;
-  color: #fefefe;
-`
+  left: 10px;
+  z-index: 2;
+`;
 
-const Option = styled.li`
-  font-size: 14px;
-  padding: 6px 8px;
-  transition: background-color 0.2s ease-in;
-  &:hover {
-    background-color: #595959;
-  }
-`
-export {SelectBox, Label, SelectOptions, Option}
+const SelectOption2 = styled.select`
+  margin-left: 170px;
+  width: 150px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 2px solid #b4e5ff;
+  z-index: 1;
+`;
+
+const CustomOption = styled.option`
+  width: 150px;
+  border-radius: 12px;
+  border: 2px solid #b4e5ff;
+`;
+
+export { Selectdiv, SelectOption1, SelectOption2, CustomOption };

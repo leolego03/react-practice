@@ -1,26 +1,36 @@
-import React from "react";
-import { SelectBox, Label, Option, SelectOptions } from "./SelectStyle";
-
+import React, { useState } from "react";
+import { Selectdiv, SelectOption1, SelectOption2, CustomOption } from "./SelectStyle";
 const Select = () => {
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const options = [
+    { value: "option1", label: "리액트" },
+    { value: "option2", label: "노드" },
+    { value: "option3", label: "스프링" },
+    { value: "option4", label: "자바" },
+  ];
+
+  const handleSelectOption = (event) => {
+    setSelectedOption(event.target.value);
+  };
+
   return (
-    <div>
-      <h1>Select</h1>
-      <SelectBox>
-        <Label>Select</Label>
-        <SelectOptions>
-          <Option>스프링</Option>
-          <Option>자바</Option>
-          <Option>리액트</Option>
-          <Option>노드</Option>
-        </SelectOptions>
-        <SelectOptions>
-          <Option>스프링</Option>
-          <Option>자바</Option>
-          <Option>리액트</Option>
-          <Option>노드</Option>
-        </SelectOptions>
-      </SelectBox>
-    </div>
+      <Selectdiv>
+        <SelectOption1 value={selectedOption} onChange={handleSelectOption} options={options}>
+          {options.map((item) => (
+            <CustomOption key={item.value} value={item.value}>
+              {item.label}
+            </CustomOption>
+          ))}
+        </SelectOption1>
+        <SelectOption2 value={selectedOption} onChange={handleSelectOption} options={options}>
+          {options.map((option) => (
+            <CustomOption key={option.value} value={option.value}>
+              {option.label}
+            </CustomOption>
+          ))}
+        </SelectOption2>
+      </Selectdiv>
   );
 };
 
