@@ -61,7 +61,7 @@ const StyledButton = styled.button`
   }
 `
 
-const colorList = ["#0091ff", "#eb4034"];
+const colorList = ["#0091ff", "#eb4034"]
 
 const Button = () => {
   const onClickPrimaryButton = () => {
